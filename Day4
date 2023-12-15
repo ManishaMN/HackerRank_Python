@@ -1,0 +1,48 @@
+def print_full_name(first, last):
+    # Write your code here
+    print('Hello ' + first + ' ' + last + '! You just delved into python.')
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+
+------------------------------
+
+def mutate_string(string, position, character):
+    x = string[:position] + character + s[position+1:]
+    return x
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
+
+------------------------------------
+
+def count_substring(string, sub_string):
+    l = 0
+    for i in range(0, len(string)):
+        if string[i] == sub_string[0]:
+            if (i+len(sub_string)) <= len(string):
+                if string[i:i+len(sub_string)] == sub_string:
+                    l = l +1
+    return l
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
+---------------------------------------------
+if __name__ == '__main__':
+    s = input()
+    print(any(c.isalnum() for c in s))
+    print(any(c.isalpha() for c in s))
+    print(any(c.isdigit() for c in s))
+    print(any(c.islower() for c in s))
+    print(any(c.isupper() for c in s))
+    
+
